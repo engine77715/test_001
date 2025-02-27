@@ -1,15 +1,14 @@
-import math
 
-#Функция для вычисления гипотенузы равнобедренного треугольника
-def calculate_hypotenuse(a):
-    hypotenuse = a * math.sqrt(2)
-    return hypotenuse
+#Задачка на треугольник
+b = int(input("b = "))
+c = int(input("c = "))
 
-#Запрос длины катета у пользователя
-a = float(input("Введите длину катета равнобедренного треугольника: "))
+if a + b <= c or a + c <= b or b + c <= a:
+    print('Треугольник не сущетсвует')
+elif a != b and a != c and b != c:
+    print('Разносторонний')
+elif a ==b == c:
+    print('Равносторонний')
+else:
+    print('Равнобедренный')
 
-#Вычисление гипотенузы
-hypotenuse = calculate_hypotenuse(a)
-
-#Вывод результата
-print(f"Гипотенуза равнобедренного треугольника с катетом длиной {a} равна {hypotenuse: .2f}")
